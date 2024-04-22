@@ -1,0 +1,64 @@
+.TH UUID_GENERATOR 1 "2024-04-12" "1.0" "UUID Generator Manual"
+.SH NAME
+uuid_generator \- utility script for generating UUIDs, categorizing directory content, and logging.
+.SH SYNOPSIS
+.B uuid_generator
+.RI [ --generate | --last | --all | --categorize [output_file] ]
+.SH DESCRIPTION
+.B uuid_generator
+is a bash script designed to perform several administrative tasks:
+.PP
+It generates UUIDs pseudo-randomly without relying on built-in system UUID generators. The script can generate and check UUIDs for collisions, logging each creation along with a timestamp in a designated log file.
+.PP
+Additionally, the script analyzes the contents of specified directories, categorizing files by type, calculating collective sizes, and identifying the shortest and longest filenames. It can output these reports to the terminal or redirect them to a file.
+.PP
+The script also maintains a comprehensive log of its operations, including user commands and execution times, which assists in audit trails and system monitoring.
+.SH OPTIONS
+.TP
+.B --generate
+Generates a new UUID, checks for collisions with previously generated UUIDs, logs the event, and outputs the UUID to the terminal. It also saves the UUID to a log file.
+.TP
+.B --last
+Displays the last generated UUID, retrieving it from a log file.
+.TP
+.B --all
+Lists all previously generated UUIDs from the log file, showing their generation times and values.
+.TP
+.B --categorize [output_file]
+Analyzes the contents of the '_Directory' folder, categorizing files by type and size. Outputs results to the terminal by default, or to a specified file if an output filename is provided. Reports on the total space used and identifies the shortest and longest filenames within each subdirectory.
+.SH EXAMPLES
+.TP
+.B Generate a UUID and log it:
+.RS
+uuid_generator --generate
+.RE
+.TP
+.B Display the last generated UUID:
+.RS
+uuid_generator --last
+.RE
+.TP
+.B List all generated UUIDs:
+.RS
+uuid_generator --all
+.RE
+.TP
+.B Categorize directory contents and output to a file:
+.RS
+uuid_generator --categorize output.txt
+.RE
+.SH FILES
+.TP
+.B uuids.log
+Stores all generated UUIDs and timestamps.
+.TP
+.B last_uuid.log
+Stores the most recently generated UUID.
+.TP
+.B generation.log
+Logs details about each UUID generation, including the date and user.
+.TP
+.B script_executions.log
+Logs each execution of the script, including the command line arguments used and the executing user.
+.SH AUTHOR
+Written by Samuel Ledun
