@@ -1,4 +1,79 @@
-# NOS_Assignment
+# UUID Generator Utility Script
+
+The `uuid_generator` is a versatile Bash script designed for system administrators to manage and monitor IT infrastructure efficiently. It facilitates the generation of UUIDs without relying on built-in system utilities, categorizes directory contents, and maintains robust logging for system activities and audits.
+
+## Features
+
+- **UUID Generation**: Generates UUIDs pseudo-randomly to ensure uniqueness and checks for collisions with previously generated UUIDs.
+- **Directory Analysis**: Analyzes and categorizes files within specified directories, reporting on file types, sizes, and identifying the shortest and longest filenames.
+- **Logging**: Maintains detailed logs of UUID generation and script execution, aiding in system monitoring and audit trails.
+
+
+
+## Installation
+
+To install the `uuid_generator` script, follow these steps:
+
+1. Clone the repository or download the source code:
+   ```bash
+   git clone https://github.com/Samuels-Account/system-utils-bash.git
+   ```
+
+2. Ensure the script is executable:
+   ```bash
+   chmod +x uuid_generator.sh
+   ```
+
+## Usage
+
+To use the script, run it from the command line with the desired options:
+
+```bash
+./uuid_generator.sh --option
+```
+
+### Options
+
+- `--generate`: Generates a new UUID and logs the event.
+- `--last`: Displays the last generated UUID.
+- `--all`: Lists all generated UUIDs.
+- `--categorize [output_file]`: Categorizes directory contents and outputs the results.
+
+### Examples
+
+- Generate a UUID and log the event:
+  ```bash
+  uuid_generator --generate
+  ```
+
+- Display the last generated UUID:
+  ```bash
+  uuid_generator --last
+  ```
+
+- List all UUIDs:
+  ```bash
+  uuid_generator --all
+  ```
+
+- Categorize directory contents and output to a file:
+  ```bash
+  uuid_generator --categorize output.txt
+  ```
+
+## Files
+
+- `uuids.log`: Stores all generated UUIDs and timestamps.
+- `last_uuid.log`: Contains the most recently generated UUID.
+- `generation.log`: Logs details of each UUID generation.
+- `script_executions.log`: Records each execution of the script.
+
+
+
+
+
+
+# Initial Instructions - NOS_Assignment
 
 ## Important
 
