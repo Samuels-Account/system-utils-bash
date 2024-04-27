@@ -8,22 +8,6 @@ The `uuid_generator` is a versatile Bash script designed for system administrato
 - **Directory Analysis**: Analyzes and categorizes files within specified directories, reporting on file types, sizes, and identifying the shortest and longest filenames.
 - **Logging**: Maintains detailed logs of UUID generation and script execution, aiding in system monitoring and audit trails.
 
-
-
-## Installation
-
-To install the `uuid_generator` script, follow these steps:
-
-1. Clone the repository or download the source code:
-   ```bash
-   git clone https://github.com/Samuels-Account/system-utils-bash.git
-   ```
-
-2. Ensure the script is executable:
-   ```bash
-   chmod +x uuid_generator.sh
-   ```
-
 ## Usage
 
 To use the script, run it from the command line with the desired options:
@@ -67,8 +51,6 @@ To use the script, run it from the command line with the desired options:
 - `last_uuid.log`: Contains the most recently generated UUID.
 - `generation.log`: Logs details of each UUID generation.
 - `script_executions.log`: Records each execution of the script.
-
-
 
 
 
