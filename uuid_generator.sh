@@ -62,10 +62,15 @@ categorize_content() {
       done
 
       for type in "${!count_types[@]}"; do
-        echo -n "Type .$type: "
-        echo -n "${count_types[$type]} files, "
-        find "$dir" -type f -name "*.$type" -exec du -ch {} + | awk '/total$/ {print $1}'
-      done
+  echo -n "Type .$type: "
+  echo -n "${count_types[$type]} files, "
+
+  # Execute find and awk in a subshell and capture the PID
+  (find "$dir" -type f -name "*.$type" -exec du -ch {} + | awk '/total$/ {print $1}') &
+  last_pid=$!
+  echo "PID for find/awk subprocess handling files of type .$type in $dir: $last_pid" >> "$LOG_FILE"
+done
+
 
       echo "Total space used in $dir: $(du -sh "$dir" | cut -f1)"
 
@@ -80,16 +85,6 @@ categorize_content() {
 
 
 case "$1" in
-
---categorize)
-    if [ -n "$2" ]; then
-      categorize_content > "$2"
-      echo "Categorization results are written to $2"
-    else
-      categorize_content
-    fi
-    ;;
-
   --generate)
     save_and_log_uuid
     ;;
@@ -108,7 +103,12 @@ case "$1" in
     fi
     ;;
   --categorize)
-    categorize_content
+    if [ -n "$2" ]; then
+      categorize_content > "$2"
+      echo "Categorization results are written to $2"
+    else
+      categorize_content
+    fi
     ;;
   *)
     echo "Usage: $0 --generate | --last | --all | --categorize"

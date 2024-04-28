@@ -33,3 +33,24 @@ Script PID: 522
 Sat Apr 27 04:06:43 PM UTC 2024 - jovyan ran ./uuid_generator.sh with args: ./uuid_generator.sh
 Script PID: 900
 Sat Apr 27 04:40:24 PM UTC 2024 - jovyan ran ./uuid_generator.sh with args: ./uuid_generator.sh
+Script PID: 406
+Sun Apr 28 03:20:42 PM UTC 2024 - jovyan ran ./uuid_generator.sh with args: ./uuid_generator.sh
+Script PID: 456
+Sun Apr 28 03:28:40 PM UTC 2024 - jovyan ran ./uuid_generator.sh with args: ./uuid_generator.sh
+PID for find/awk subprocess handling files of type .sh in _Directory/subdirectory_1: 458
+PID for find/awk subprocess handling files of type .dat in _Directory/subdirectory_1: 459
+PID for find/awk subprocess handling files of type .jpg in _Directory/subdirectory_1: 460
+PID for find/awk subprocess handling files of type .png in _Directory/subdirectory_1: 462
+PID for find/awk subprocess handling files of type .txt in _Directory/subdirectory_1: 464
+PID for find/awk subprocess handling files of type .sh in _Directory/subdirectory_2: 493
+PID for find/awk subprocess handling files of type .dat in _Directory/subdirectory_2: 494
+PID for find/awk subprocess handling files of type .jpg in _Directory/subdirectory_2: 495
+PID for find/awk subprocess handling files of type .png in _Directory/subdirectory_2: 496
+PID for find/awk subprocess handling files of type .txt in _Directory/subdirectory_2: 497
+PID for find/awk subprocess handling files of type .sh in _Directory/subdirectory_3: 528
+PID for find/awk subprocess handling files of type .dat in _Directory/subdirectory_3: 529
+PID for find/awk subprocess handling files of type .jpg in _Directory/subdirectory_3: 530
+PID for find/awk subprocess handling files of type .png in _Directory/subdirectory_3: 531
+PID for find/awk subprocess handling files of type .txt in _Directory/subdirectory_3: 532
+Script PID: 772
+Sun Apr 28 03:57:51 PM UTC 2024 - jovyan ran ./uuid_generator.sh with args: ./uuid_generator.sh
